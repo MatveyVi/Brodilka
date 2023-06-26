@@ -960,7 +960,7 @@ BoxCollider2D:
   m_GameObject: {fileID: 1020780692515578154}
   m_Enabled: 1
   m_Density: 1
-  m_Material: {fileID: 6200000, guid: 1ffd0b080a8d44441a8e86324ea481ee, type: 2}
+  m_Material: {fileID: 6200000, guid: ac3dcfcce5db18d4bb08145e813df565, type: 2}
   m_IncludeLayers:
     serializedVersion: 2
     m_Bits: 0
@@ -1096,7 +1096,7 @@ CircleCollider2D:
   m_GameObject: {fileID: 1020780692515578154}
   m_Enabled: 1
   m_Density: 1
-  m_Material: {fileID: 6200000, guid: 1ffd0b080a8d44441a8e86324ea481ee, type: 2}
+  m_Material: {fileID: 6200000, guid: ac3dcfcce5db18d4bb08145e813df565, type: 2}
   m_IncludeLayers:
     serializedVersion: 2
     m_Bits: 0
@@ -1144,7 +1144,7 @@ EdgeCollider2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1020780692515578154}
-  m_Enabled: 1
+  m_Enabled: 0
   m_Density: 1
   m_Material: {fileID: 6200000, guid: ac3dcfcce5db18d4bb08145e813df565, type: 2}
   m_IncludeLayers:
@@ -1172,8 +1172,8 @@ EdgeCollider2D:
   m_Offset: {x: 0, y: 0}
   m_EdgeRadius: 0
   m_Points:
-  - {x: -6.3516693, y: -7.8022194}
-  - {x: 5.601457, y: -7.8022194}
+  - {x: -5.9858174, y: -7.8022194}
+  - {x: 5.2355995, y: -7.8022194}
   m_AdjacentStartPoint: {x: 0, y: 0}
   m_AdjacentEndPoint: {x: 0, y: 0}
   m_UseAdjacentStartPoint: 0
@@ -1185,7 +1185,7 @@ EdgeCollider2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1020780692515578154}
-  m_Enabled: 1
+  m_Enabled: 0
   m_Density: 1
   m_Material: {fileID: 6200000, guid: ac3dcfcce5db18d4bb08145e813df565, type: 2}
   m_IncludeLayers:
@@ -1489,7 +1489,7 @@ EdgeCollider2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1020780692798283972}
-  m_Enabled: 1
+  m_Enabled: 0
   m_Density: 1
   m_Material: {fileID: 6200000, guid: ac3dcfcce5db18d4bb08145e813df565, type: 2}
   m_IncludeLayers:
@@ -1983,7 +1983,7 @@ EdgeCollider2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1020780693675529866}
-  m_Enabled: 1
+  m_Enabled: 0
   m_Density: 1
   m_Material: {fileID: 6200000, guid: ac3dcfcce5db18d4bb08145e813df565, type: 2}
   m_IncludeLayers:
@@ -2115,7 +2115,7 @@ EdgeCollider2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1020780693862519349}
-  m_Enabled: 1
+  m_Enabled: 0
   m_Density: 1
   m_Material: {fileID: 6200000, guid: ac3dcfcce5db18d4bb08145e813df565, type: 2}
   m_IncludeLayers:
