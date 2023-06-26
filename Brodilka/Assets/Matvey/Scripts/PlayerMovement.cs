@@ -17,6 +17,7 @@ public class PlayerMovement : MonoBehaviour
 
     void Update()
     {
+
         float move = Input.GetAxis("Horizontal");
         GetComponent<Rigidbody2D>().velocity = new Vector2(move * maxSpeed, GetComponent<Rigidbody2D>().velocity.y);
 
@@ -28,9 +29,8 @@ public class PlayerMovement : MonoBehaviour
         {
             Flip();
         }
-        if ((Input.GetKeyDown(KeyCode.Space)) && !inAir)
+        if (Input.GetKeyDown(KeyCode.Space) && !inAir)
         {
-            inAir = true;
             m_Rigidbody2D.AddForce(force);
         }
 
@@ -47,6 +47,13 @@ public class PlayerMovement : MonoBehaviour
         if (collision.gameObject.layer == LayerMask.NameToLayer("Ground"))
         {
             inAir = false;
+        }
+    }
+    private void OnCollisionExit2D(Collision2D collision)
+    {
+        if (collision.gameObject.layer == LayerMask.NameToLayer("Ground"))
+        {
+            inAir = true;
         }
     }
 }
