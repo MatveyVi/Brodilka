@@ -4,11 +4,15 @@ public class PlayerMovement : MonoBehaviour
 {
     public float maxSpeed = 10f;
     private bool flipRight = true;
+    [HideInInspector]
+    public Rigidbody2D m_Rigidbody2D;
+    Vector2 force = new Vector2(0, 600);
+    public bool inAir;
 
 
     void Start()
     {
-
+        m_Rigidbody2D = GetComponent<Rigidbody2D>();
     }
 
     void Update()
@@ -24,6 +28,11 @@ public class PlayerMovement : MonoBehaviour
         {
             Flip();
         }
+        if ((Input.GetKeyDown(KeyCode.Space)) && !inAir)
+        {
+            inAir = true;
+            m_Rigidbody2D.AddForce(force);
+        }
 
     }
     private void Flip()
@@ -32,6 +41,13 @@ public class PlayerMovement : MonoBehaviour
         Vector3 theScale = transform.localScale;
         theScale.x *= -1;
         transform.localScale = theScale;
+    }
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.layer == LayerMask.NameToLayer("Ground"))
+        {
+            inAir = false;
+        }
     }
 }
 
