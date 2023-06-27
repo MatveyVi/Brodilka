@@ -6,7 +6,7 @@ public class PlayerMovement : MonoBehaviour
     private bool flipRight = true;
     [HideInInspector]
     public Rigidbody2D m_Rigidbody2D;
-    Vector2 force = new Vector2(0, 600);
+    Vector2 force = new Vector2(0, 700);
     public bool inAir;
 
 
