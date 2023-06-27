@@ -9,6 +9,9 @@ public class PlayerMovement : MonoBehaviour
     Vector2 force = new Vector2(0, 700);
     public bool inAir;
 
+    //AlphaPlatform
+    public GameObject []StairsWithAlphaCollider;
+
 
     void Start()
     {
@@ -47,6 +50,11 @@ public class PlayerMovement : MonoBehaviour
         if (collision.gameObject.layer == LayerMask.NameToLayer("Ground"))
         {
             inAir = false;
+            foreach (GameObject stairs in StairsWithAlphaCollider)
+            {
+                stairs.GetComponent<BoxCollider2D>().enabled = true;
+            }
+
         }
     }
     private void OnCollisionExit2D(Collision2D collision)
@@ -54,6 +62,18 @@ public class PlayerMovement : MonoBehaviour
         if (collision.gameObject.layer == LayerMask.NameToLayer("Ground"))
         {
             inAir = true;
+        }
+    }
+
+
+    private void OnTriggerStay2D(Collider2D collision)
+    {
+        if (collision.gameObject.layer == LayerMask.NameToLayer("Alpha"))
+        {
+            foreach (GameObject stairs in StairsWithAlphaCollider)
+            {
+                stairs.GetComponent<BoxCollider2D>().enabled = false;
+            }
         }
     }
 }
