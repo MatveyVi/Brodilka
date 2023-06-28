@@ -11,10 +11,6 @@ public class LevelTransition : MonoBehaviour
         FinishObj = GameObject.FindGameObjectWithTag("Finish");
     }
 
-    private void _LevelTransition(int levelToLoad)
-    {
-        SceneManager.LoadScene("level" + levelToLoad);
-    }
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.gameObject.tag == ("Player"))
