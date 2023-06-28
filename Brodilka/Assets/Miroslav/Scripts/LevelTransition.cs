@@ -3,11 +3,8 @@ using UnityEngine.SceneManagement;
 
 public class LevelTransition : MonoBehaviour
 {
-    private string sceneName;
-    private int levelToLoad;
-    private GameObject FinishObj;
-    // private int levelToLoad;
 
+    private GameObject FinishObj;
 
     private void Start()
     {
@@ -26,20 +23,17 @@ public class LevelTransition : MonoBehaviour
             {
                 SceneManager.LoadScene("Level2");
             }
-            if (FinishObj.layer == LayerMask.NameToLayer("FinishLevel2"))
+            else if (FinishObj.layer == LayerMask.NameToLayer("FinishLevel2"))
             {
                 SceneManager.LoadScene("Level3");
             }
+            else if (FinishObj.layer == LayerMask.NameToLayer("FinishLevel3"))
+            {
+                SceneManager.LoadScene("Level4");
+            }
+
+
 
         }
-        //private void OnTriggerStay2D(Collider2D collision)
-        //{
-        //sceneName = SceneManager.GetActiveScene().name;
-        //var level = ((sceneName)[5]);
-        // Debug.Log(level);
-
-
-        //}
-        // }
     }
 }
